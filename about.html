@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SUFYM | Filtros y suministros </title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--Color Switcher Mockup-->
+    <link href="css/color-switcher-design.css" rel="stylesheet">
+    <!--Color Themes-->
+    <link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <link rel="shortcut icon" href="images/sufym/logo.png" type="image/x-icon">
+    <link rel="icon" href="images/sufym/logo.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <style>
+        .choice-section:before {
+            background-color: gray;
+        }
+
+        body {
+            margin-top: 20px;
+        }
+
+        .timeline_area {
+            position: relative;
+            z-index: 1;
+        }
+
+        .single-timeline-area {
+            position: relative;
+            z-index: 1;
+            padding-left: 180px;
+        }
+
+        @media only screen and (max-width: 575px) {
+            .single-timeline-area {
+                padding-left: 100px;
+            }
+        }
+
+        .single-timeline-area .timeline-date {
+            position: absolute;
+            width: 180px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -ms-grid-row-align: center;
+            align-items: center;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            padding-right: 60px;
+        }
+
+        @media only screen and (max-width: 575px) {
+            .single-timeline-area .timeline-date {
+                width: 100px;
+            }
+        }
+
+        .single-timeline-area .timeline-date::after {
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            content: "";
+            background-color: #ebebeb;
+            top: 0;
+            right: 30px;
+            z-index: 1;
+        }
+
+        .single-timeline-area .timeline-date::before {
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: #f1c40f;
+            content: "";
+            top: 50%;
+            right: 26px;
+            z-index: 5;
+            margin-top: -5.5px;
+        }
+
+        .single-timeline-area .timeline-date p {
+            margin-bottom: 0;
+            color: #020710;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .single-timeline-area .single-timeline-content {
+            position: relative;
+            z-index: 1;
+            padding: 30px 30px 25px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+            box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+            border: 1px solid #ebebeb;
+        }
+
+        @media only screen and (max-width: 575px) {
+            .single-timeline-area .single-timeline-content {
+                padding: 20px;
+            }
+        }
+
+        .single-timeline-area .single-timeline-content .timeline-icon {
+            -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+            width: 30px;
+            height: 30px;
+            background-color: #f1c40f;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 30px;
+            flex: 0 0 30px;
+            text-align: center;
+            max-width: 30px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .single-timeline-area .single-timeline-content .timeline-icon i {
+            color: #ffffff;
+            line-height: 30px;
+        }
+
+        .single-timeline-area .single-timeline-content .timeline-text h6 {
+            -webkit-transition-duration: 500ms;
+            transition-duration: 500ms;
+        }
+
+        .single-timeline-area .single-timeline-content .timeline-text p {
+            font-size: 13px;
+            margin-bottom: 0;
+        }
+
+        .single-timeline-area .single-timeline-content:hover .timeline-icon,
+        .single-timeline-area .single-timeline-content:focus .timeline-icon {
+            background-color: #020710;
+        }
+
+        .single-timeline-area .single-timeline-content:hover .timeline-text h6,
+        .single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+            color: #3f43fd;
+        }
+
+
+        .newsletter-section:before {
+
+            background-color: gray !important;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+        <!-- Main Header / Header Style Two-->
+        <header class="main-header header-style-two">
+
+            <!--Header Top-->
+            <div class="header-top-two">
+                <div class="auto-container">
+                    <div class="clearfix">
+                        <!--Top Left-->
+                        <div class="top-left">
+                            <!--Social Box-->
+                            <ul class="social-box">
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                            </ul>
+                        </div>
+                        <!--Top Right-->
+                        <div class="top-right">
+                            <div class="timing">Horario: Lunes - Viernes 08:00 - 18:00 </div>
+                            <!--Language-->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="index.html" class="img-responsive"><img src="images/sufym/logo.png" alt=""
+                                title=""></a>
+                    </div>
+
+                    <!--Right Col-->
+                    <div class="right-col pull-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                                <ul class="navigation clearfix">
+                                    <li class=""><a href="index.html">INICIO</a></li>
+                                    <li class=""><a href="index.html#nosotros">SUFYM</a></li>
+                                    <li class=""><a href="index.html#servicios">SERVICIOS</a></li>
+                                    <li class=""><a href="index.html#proyecto">PROYECTOS</a></li>
+                                    <li class=""><a href="index.html#productos">PRODUCTOS</a></li>
+                                    <li><a href="contact.html">CONTÁCTANOS</a></li>
+                                </ul>
+                            </div>
+                        </nav><!-- Main Menu End-->
+                    </div>
+
+                </div>
+            </div>
+            <!--End Sticky Header-->
+
+        </header>
+        <!--End Main Header -->
+
+
+
+        <section class="choice-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column wow fadeInLeft animated" data-wow-delay="0ms"
+                            data-wow-duration="1500ms"
+                            style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                            <div class="image">
+                                <img src="images/sufym/Backgrounds/banner03.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Column -->
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <!-- Sec Title -->
+                            <div class="sec-title">
+                                <div class="title-inner">
+                                    <div class="title">+ 25 años en el mercado</div>
+                                    <h2>¿Por qué somos los favoritos de nuestros clientes?</h2>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <p>Una empresa formada en el año de mil novecientos noventa y dos, con el objetivo de
+                                    brindar siempre un buen servicio y productos de calidad a nuestros clientes, y que
+                                    tengan la total confianza que tendrán el mejor producto al momento de realizar su
+                                    actividad diaria ya sean productos o servicios del ramo industrial, agrícola,
+                                    construcción, minera, transporte.</p>
+                                <p>En Sufym, nos dedicamos a brindarles nuestros productos ya
+                                    sean Lubricantes para Motor ( diesel o gasolina),Hidráulicos, Diferenciales,
+                                    Transmisiones, Circulación , Engranes, Compresores, Fluidez de Corte,
+                                    Anticongelantes concentrados y premezclados desde litro, cubeta y tambor de
+                                    doscientos ocho litros y más. </p>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="column col-md-6 col-sm-6 col-xs-12">
+                                    <ul class="list-style-two">
+                                        <li><span class="icon flaticon-settings-3"></span>Amplio surtido de productos
+                                        </li>
+                                        <li><span class="icon flaticon-labor-man"></span>Atención personalizada</li>
+                                    </ul>
+                                </div>
+                                <div class="column col-md-6 col-sm-6 col-xs-12">
+                                    <ul class="list-style-two">
+                                        <li><span class="icon flaticon-clock-2"></span> Disponibilidad 24 horas</li>
+                                        <li><span class="icon flaticon-bullseye"></span>Enfoque a soluciones</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <section class="timeline_area section_padding_130">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-8 col-lg-6">
+                        <!-- Section Heading-->
+                        <div class="section_heading text-center">
+                            <h6>Nuestra historia</h6>
+                            <h3>Cambiando e innovando para mejorar</h3>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Timeline Area-->
+                        <div class="apland-timeline-area">
+                            <!-- Single Timeline Content-->
+                            <div class="single-timeline-area">
+                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                    <p style="text-align: center ;">Nuestro siguiente paso</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><i class="fa fa-address-card"
+                                                    aria-hidden="true"></i></div>
+                                            <div class="timeline-text">
+                                                <h6>Updated 5.0</h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                                            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><i class="fa fa-archive" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="timeline-text">
+                                                <h6>Fixed bug</h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s"
+                                            style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><i class="fa fa-address-book"
+                                                    aria-hidden="true"></i></div>
+                                            <div class="timeline-text">
+                                                <h6>Reach 1k Users</h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Timeline Content-->
+                            <div class="single-timeline-area">
+                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                    <p>25 años</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><i class="fa fa-briefcase"
+                                                    aria-hidden="true"></i></div>
+                                            <div class="timeline-text">
+                                                <h6>Updated 4.4.0</h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                                            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="timeline-text">
+                                                <h6>Fixed bug</h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Timeline Content-->
+                            <div class="single-timeline-area">
+                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
+                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                                    <p>FUNDACIÓN</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s"
+                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><i class="fa fa-id-card" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="timeline-text">
+                                                <h6>Updated 4.0</h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s"
+                                            style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><i class="fa fa-desktop" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="timeline-text">
+                                                <h6>Fixed bug</h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s"
+                                            style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                                            <div class="timeline-icon"><i class="fa fa-picture-o"
+                                                    aria-hidden="true"></i></div>
+                                            <div class="timeline-text">
+                                                <h6>Reach 500 Users</h6>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sponsors Section-->
+            <section class="sponsors-section-two" style="background-image:url(images/sufym/06banner.jpg)">
+                <div class="auto-container">
+
+                    <div class="sponsors-outer">
+                        <!--Sponsors Carousel-->
+                        <ul class="sponsors-carousel owl-carousel owl-theme">
+                            <li class="slide-item">
+                                <figure class="image-box"><a href="#"><img src="images/sufym/Clientes/1.png" alt=""></a>
+                                </figure>
+                            </li>
+                            <li class="slide-item">
+                                <figure class="image-box"><a href="#"><img src="images/sufym/Clientes/2.png" alt=""></a>
+                                </figure>
+                            </li>
+                            <li class="slide-item">
+                                <figure class="image-box"><a href="#"><img src="images/sufym/Clientes/3.png" alt=""></a>
+                                </figure>
+                            </li>
+                            <li class="slide-item">
+                                <figure class="image-box"><a href="#"><img src="images/sufym/Clientes/4.png" alt=""></a>
+                                </figure>
+                            </li>
+                            <li class="slide-item">
+                                <figure class="image-box"><a href="#"><img src="images/sufym/Clientes/5.png" alt=""></a>
+                                </figure>
+                            </li>
+                            <li class="slide-item">
+                                <figure class="image-box"><a href="#"><img src="images/sufym/Clientes/6.png" alt=""></a>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+            <!--End Sponsors Section-->
+
+
+
+            <section class="newsletter-section" style="background-image:url(images/background/13.jpg)">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="row clearfix">
+                            <!--Title Column-->
+                            <div class="title-column col-lg-5 col-md-12 col-sm-12">
+                                <div class="inner-column">
+                                    <div class="icon-box">
+                                        <span style="color: white;" class="icon flaticon-mail"></span>
+                                    </div>
+                                    <h5 style="color: white ;">Sé de los primeros en recibir</h5>
+                                    <div class="title"> Promociones &amp;  noticias de SUFYM</div>
+                                </div>
+                            </div>
+
+                            <!--Form Column-->
+                            <div class="form-column col-lg-7 col-md-12 col-sm-12">
+                                <div class="inner-column">
+
+                                    <!--Subscribe Form-->
+                                    <div class="subscribe-form">
+                                        <form method="post" action="index.html">
+                                            <div class="form-group">
+                                                <input type="email" name="email" value="" placeholder="Email"
+                                                    required="">
+                                                <button type="submit" class="theme-btn btn-style-two">SUSCRIBIRME</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+            <footer class="footer-style-two">
+
+                <div class="auto-container">
+
+                    <!--Widgets Section-->
+                    <div class="widgets-section" style="background-image:url(images/background/pattern-3.png)">
+                        <div class="row clearfix">
+
+                            <!--big column-->
+                            <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                                <div class="row clearfix">
+
+                                    <!--Footer Column-->
+                                    <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="footer-widget logo-widget">
+                                            <div class="logo">
+                                                <a href="index.html"><img src="" alt="" /></a>
+                                            </div>
+                                            <div class="text">
+                                                <p>Sufym: Cuenta con más de 25 años en el mercado, ofreciendo servicios
+                                                    de
+                                                    calidad e innovación.</p>
+                                                <p>Comprometidos con nuestros clientes para ser la solución que
+                                                    necesitan.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Footer Column-->
+                                    <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="footer-widget usefull-links">
+                                            <h5>Accesos directos</h5>
+                                            <div class="row clearfix">
+                                                <div class="column col-lg-6 col-md-6 col-sm-12">
+                                                    <ul>
+                                                        <li><a href="index.html#inicio">Inicio</a></li>
+                                                        <li><a href="index.html#nosotros">Sufym</a></li>
+                                                        <li><a href="index.html#servicios">Servicios</a></li>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="column col-lg-6 col-md-6 col-sm-12">
+                                                    <ul>
+                                                        <li><a href="index.html#productos">Productos</a></li>
+                                                        <li><a href="contact.html">Contactanos</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!--big column-->
+                            <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                                <div class="row clearfix">
+
+                                    <!--Footer Column-->
+                                    <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="footer-widget services-widget">
+                                            <h5>Servicios</h5>
+                                            <ul class="service-list">
+                                                <li><a href="pesada.html">Maquinaria pesada</a></li>
+                                                <li><a href="ligera.html">Maquinaria ligera</a></li>
+                                                <li><a href="mecanico.html">Servicios mecánicos</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!--Footer Column-->
+                                    <div class="footer-column col-lg-6 col-md-6 col-sm-12">
+                                        <div class="footer-widget info-widget">
+                                            <h5>Información de contacto</h5>
+                                            <ul class="list-style-one alternate">
+                                                <li><span class="icon flaticon-map-1"></span> Av. Abraham Lincoln 6448,
+                                                    Villa
+                                                    Cumbres, 64116 Monterrey, N.L.</li>
+                                                <li><span class="icon flaticon-mail"></span>Telefono: 00 0000 0000 </li>
+                                                <li><span class="icon flaticon-stopwatch"></span>Horario: Lunes -
+                                                    Viernes
+                                                    08:00 - 18:00</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="auto-container">
+                        <div class="row clearfix">
+
+                            <!-- Social Column -->
+                            <div class="social-colu mn col-lg-6 col-md-12 col-sm-12">
+                                <ul class="footer-nav">
+                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </footer>
+            <!-- End Footer Style Two -->
+
+    </div>
+    <!--End pagewrapper-->
+
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+    <!-- Color Palate / Color Switcher -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/script.js"></script>
+    <!--Google Map APi Key-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD39_Mb1wKUcuRD-0KPmQT6SQHhEMVX1O0"></script>
+    <script src="js/map-script.js"></script>
+    <!--End Google Map APi-->
+
+    <script src="js/color-settings.js"></script>
+
+</body>
+
+</html>
