@@ -211,6 +211,32 @@ img{
 	color:#ffffff;
 }
 
+/* List Style Entrega */
+.list-style-one-entrega{
+	position:relative;
+}
+
+.list-style-one-entrega li{
+	position:relative;
+	color:#000048;
+	font-size:16px;
+	padding-left:70px;
+	font-weight:700;
+	padding-top:14px;
+	margin-bottom:40px;
+}
+
+.list-style-one-entrega li .icon{
+	position:absolute;
+	left:0px;
+	top:6px;
+	font-size:46px;
+	color:#ffd11a;
+	line-height:1em;
+	font-weight:300;
+}
+
+
 /* List Style Two */
 
 .list-style-two{
